@@ -42,6 +42,12 @@ Console.WriteLine(hashedData1);
 Console.WriteLine(hashedData2);
 
 Console.WriteLine(string.Equals(hashedData1, hashedData2, StringComparison.Ordinal));
+
+
+//hashing with Salt
+var hashingWithSalt = new HashingWithSalt();
+var hashedPassword = hashingWithSalt.Hash("This is my passsword");
+Console.WriteLine(hashingWithSalt.Verify(hashedPassword, "This is my passsword"));
 Console.ReadLine();
 
 
